@@ -10,5 +10,9 @@ function increment() {
 function save() {
     let countStr = count + " - "
     saveEl.textContent += countStr
+    countEl.textContent = 0
+    // JS remembers what you've done previously. Needs to reset count back to 0 or the count
+    // will start from the last increment
+    count = 0
 }
 
